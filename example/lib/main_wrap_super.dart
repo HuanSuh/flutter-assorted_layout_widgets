@@ -15,9 +15,10 @@ class Demo extends StatelessWidget {
             color: Colors.grey[300],
             child: WrapSuper(
               alignment: WrapSuperAlignment.center,
-              wrapType: WrapType.balanced,
+              wrapType: WrapType.fit,
               spacing: 5.0,
               lineSpacing: 2.0,
+              maxLines: 5,
               children: [
                 Box(color: Colors.black, width: 200, height: 2),
                 Box.r(width: 100 - 5.0, height: 20),
@@ -38,7 +39,8 @@ class Demo extends StatelessWidget {
                 Box.y(width: 120, height: 30),
                 Box.r(width: 5, height: 40),
                 Box(color: Colors.black, width: 200, height: 2),
-                ...List<Widget>.filled(200 ~/ (4 + 5), Box.g(width: 4, height: 5)),
+                ...List<Widget>.filled(
+                    200 ~/ (4 + 5), Box.g(width: 4, height: 5)),
               ],
             ),
           ),
